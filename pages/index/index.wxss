@@ -1,0 +1,38 @@
+/**index.wxss**/
+.titleImg{
+  box-sizing: border-box;
+  flex: 0 0 50%;
+  padding:10px;
+}
+.forImg{
+  width:100%;
+}
+.rating{
+  color:red;
+}
+.searchIcon{
+  width: 20px;
+  position: absolute;
+  top:5px;
+  left:10%;
+}
+.searchContainer{
+  padding:0 10px;
+  margin-top:10px;
+  position: relative;
+  height:35px;
+}
+.searchInput{
+  width: 82%;
+  text-align: left;
+  font-size:15px;
+  border:1px solid #ccc;
+  position:absolute;
+  top:0;
+  left:9%;
+  right:10%;
+  padding-left: 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height:30px;
+}

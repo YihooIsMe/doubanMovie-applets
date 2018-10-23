@@ -1,0 +1,179 @@
+.movieDetailContainer{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top {
+  text-align: center;
+  padding:10px 0px;
+  background: #7f4843;
+}
+
+.middleContent {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+}
+
+.contentLeft {
+  flex: 0 0 70%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.contentRight {
+  flex: 0 0 30%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.movieTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ratingContainer {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  width: 100%;
+  word-break: break-all;
+  padding: 5px;
+  box-shadow: 0 0 1px #aaa;
+  text-align: center;
+}
+
+.rating {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.synopsisContainer {
+  padding: 5px 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.descriptionContent {
+  font-size: 15px;
+  /* display: -webkit-box; */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.descriptionTitle{
+  position: relative;
+  height:30px;
+}
+.titleLeft{
+  position: absolute;
+  top:0;
+  left:0;
+  padding:5px;
+  font-size: 15px;
+  color: #aaa;
+}
+.titleRight{
+  position: absolute;
+  top:0;
+  right:0;
+  padding:5px;
+  font-size:15px;
+  color:#00B51D;
+}
+.actorsAndDirectors{
+  padding:10px;
+  font-size:15px;
+  border-bottom:1px solid #ddd;
+}
+.actorsTitle{
+  color:#aaa;
+  padding:0px 5px 5px;
+  font-size: 15px;
+}
+.pageScroll{
+  padding:10px;
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+
+.scroll-view-item{
+  display: inline-block;
+  width: 90%;
+  padding:5px;
+  box-sizing: border-box;
+}
+
+.itemImg{
+  width: 100%;
+}
+.picTitle,.commentTitle{
+  color:#aaa;
+  font-size: 15px;
+  padding:5px 10px 10px;
+}
+.moviePic{
+  border-bottom:1px solid #ddd;
+}
+.movieCommentsContainer{
+  padding:10px;
+}
+.likeCount{
+  float: right;
+  font-size:16px;
+  color:#aaa;
+  height:22px;
+  line-height: 22px;
+}
+.userName{
+  float: left;
+  font-size:16px;
+  font-weight:bold;
+}
+.headerTitle:after{
+  content:"";
+  display:block;
+  clear: both;
+}
+.userCommentContainer{
+  padding:0 10px;
+}
+.imgStar{
+  float: left;
+  margin-left:5px;
+}
+.imgStar image{
+  width: 20px;
+}
+.likeImg{
+  width: 18px;
+  vertical-align: top;
+}
+.likeText{
+  display: inline-block;
+  height:22px;
+  line-height: 22px;
+}
+.userComments{
+  font-size: 15px;
+  margin-left:30px;
+}
+.userCommentsTime{
+  font-size: 14px;
+  color:#aaa;
+  margin:5px 0 10px 30px;
+}
+
+.bgStar{
+  width: 60px;
+  height:11px;
+  display: inline-block;
+  background: url("https://img3.doubanio.com/f/shire/b8f4c3672ef81106701071831e22422a745d3b74/pics/rating_icons/ic_rating_s.png") no-repeat;
+    background-position: center 10px;
+}

@@ -1,0 +1,14 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content:flex-start;
+} 
+.center{
+  text-align: center;
+  font-size:16px;
+}

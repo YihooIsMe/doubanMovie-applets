@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view wx:if="{{showInput}}" class="center searchContainer">
+  <image src="../../image/search.png" class="searchIcon" mode="widthFix"></image>
+  <input class="searchInput" type='text' placeholder='搜索电影、电视剧、综艺、影人' placeholder-style="font-size:14px;" confirm-type='done' bindblur="searchResult" value='{{searchVal}}' />
+</view>
+<view class="container">
+  <view wx:for="{{dataSource}}" wx:key="{{index}}" class="titleImg">
+    <view data-movieid='{{item.id}}' bindtap='loadMovieDetail'>
+      <image src='{{item.coverUrl}}' mode='scaleToFill' class="forImg"></image>
+      <view class="center">{{item.title}}</view>
+      <view wx:if="{{item.rating===null}}" class="rating center">暂无评分</view>
+      <view wx:if="{{item.rating!==null}}" class="rating center">{{item.rating}}</view>
+    </view>
+  </view>
+</view>

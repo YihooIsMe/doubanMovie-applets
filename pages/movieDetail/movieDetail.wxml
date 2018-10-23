@@ -1,0 +1,130 @@
+<view class="movieDetailContainer" wx:if='{{showContainer}}'>
+  <view class="top">
+    <image src='{{transformImgUr}}' mode='widthFix' style='width:10rem' />
+  </view>
+
+  <view class="middleContent">
+    <view class="contentLeft">
+      <text class="movieTitle">{{movieDetailContent.title}}</text>
+      <view>
+        <view>{{movieDetailContent.pressDate}}/{{countriesAndGenres}}</view>
+        <view>别名:{{titleAliasesStr}}</view>
+        <view wx:if="{{publishDateStr!==''}}">上映时间:{{publishDateStr}}</view>
+        <view wx:if="{{movieDetailContent.durationMin!==null}}">片长:{{movieDetailContent.durationMin}}分钟</view>
+      </view>
+    </view>
+    <view class="contentRight">
+      <view class="ratingContainer">
+        <view class="center rating">{{movieDetailContent.rating===null?"无评分":movieDetailContent.rating}}</view>
+        <text class="bgStar" style="background-position:{{backgroundPosotion}}"></text>
+
+        <view class="center">{{movieDetailContent.ratingCount}}人</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="synopsisContainer">
+    <view class="descriptionTitle">
+      <view class="titleLeft">剧情简介</view>
+      <view class="titleRight" bindtap='toggleDescription'>{{descriptionBtn}}</view>
+    </view>
+    <view class="descriptionContent" style='display:{{descriptionDisplay}}'>{{movieDetailContent.description}}</view>
+  </view>
+
+  <view class="actorsAndDirectors">
+    <view class="actorsTitle">影人</view>
+    <view>导演:{{directors}}</view>
+    <view>主演:{{actors}}</view>
+  </view>
+  <view class="moviePic">
+    <view class="picTitle">剧照</view>
+    <view class="pageScroll">
+      <scroll-view scroll-x="true" style='width:100%;' class="scroll-view_H">
+        <view wx:for="{{imageUrls}}" wx:key="{{index}}" class="scroll-view-item">
+          <image src='{{item}}' lazy-load="true" class="itemImg" mode="aspectFill" />
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="movieCommentsContainer">
+    <view class="commentTitle">短评</view>
+    <wxs module="operateStr">
+      var strSubstr = function(val) {
+        return val.substring(0, 10);
+      };
+      var addEllipsis = function(str) {
+        if (str.length > 6) {
+          return str.substring(0, 6) + "...";
+        } else {
+          return str;
+        }
+      };
+      module.exports.strSubstr = strSubstr;
+      module.exports.addEllipsis = addEllipsis;
+    </wxs>
+    <block wx:if="{{movieCommentsContent.length===0}}">
+      <view class="userCommentContainer center">
+        暂无评论
+      </view>
+    </block>
+    <block wx:if="{{movieCommentsContent!==undefined}}" wx:for="{{movieCommentsContent}}" wx:key="{{index}}">
+      <view class="userCommentContainer">
+        <view class="headerTitle">
+          <!-- <view class="userName">{{item.commenterScreenName}}</view> -->
+          <view class="userName">{{operateStr.addEllipsis(item.commenterScreenName)}}</view>
+          <view wx:if="{{item.rating===0}}" class="imgStar">
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+          </view>
+          <view wx:if="{{item.rating===1}}" class="imgStar">
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+          </view>
+          <view wx:if="{{item.rating===2}}" class="imgStar">
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+          </view>
+          <view wx:if="{{item.rating===3}}" class="imgStar">
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+            <image src='../../image/darkStar.png' mode="widthFix"></image>
+          </view>
+          <view wx:if="{{item.rating===4}}" class="imgStar">
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+          </view>
+          <view wx:if="{{item.rating===5}}" class="imgStar">
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+            <image src='../../image/lightStar.png' mode="widthFix"></image>
+          </view>
+          <view class="likeCount">
+            <image src="../../image/like.png" class="likeImg" mode="widthFix"></image>
+            <view class="likeText">{{item.likeCount}}</view>
+          </view>
+        </view>
+
+        <view class="userComments">{{item.content}}</view>
+        <view class="userCommentsTime">{{operateStr.strSubstr(item.publishDateStr)}}</view>
+      </view>
+    </block>
+
+  </view>
+</view>
