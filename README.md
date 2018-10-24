@@ -7,8 +7,8 @@
 <br>
 <h3 style="margin:10px 0">页面相关截图</h3>
 
-<img src="READMEIMGS/appletsDouban1.png" width="400px" alt="相关截图">
-<img src="READMEIMGS/appletsDouban1.png" width="400px" alt="相关截图">
+<img src="READMEIMGS/appletsDouban1.png" width="400px" alt="相关截图" style="margin-bottom:10px;">
+<img src="READMEIMGS/appletsDouban2.png" width="400px" alt="相关截图">
 
 <h3 style="margin:10px 0">下载运行</h3>
 
