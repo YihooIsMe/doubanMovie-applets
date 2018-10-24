@@ -7,8 +7,8 @@
 <br>
 <h3 style="margin:10px 0">页面相关截图</h3>
 
-![页面相关截图](READMEIMGS/appletsDouban1.png)
-![页面相关截图](READMEIMGS/appletsDouban2.png)
+![页面相关截图](READMEIMGS/appletsDouban1.png){: width="400px" }
+![页面相关截图](READMEIMGS/appletsDouban2.png){: width="400px" }
 
 <h3 style="margin:10px 0">下载运行</h3>
 
