@@ -11,9 +11,11 @@
 ![页面相关截图](READMEIMGS/appletsDouban2.png)
 
 <h3 style="margin:10px 0">下载运行</h3>
+
 >1、[Download ZIP](https://github.com/YihooIsMe/doubanMovie-applets.git)
 >2、编辑project.config.json文件，将appid换成自己所用的，进入微信开发者工具就能调试运行了
 
 <h3 style="margin:10px 0">说明</h3>
+
 * 小程序中所有涉及到的豆瓣api是从网上找来的
 * 本小程序仅供学习展示所用
